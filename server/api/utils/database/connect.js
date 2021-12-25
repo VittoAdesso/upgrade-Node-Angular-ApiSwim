@@ -12,6 +12,7 @@ const mongoDb = process.env.MONGO_DB;
 
 
 //4 Configuramos la función connect en un try catch para controlar los errores == siempre igual
+// es una función asínctona que ayuda a conectar
 const connect = async () => {
     try {
         const db = await mongoose.connect(mongoDb, {

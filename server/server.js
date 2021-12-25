@@ -10,8 +10,39 @@ connect();
 
 const app = express(); // app es igual a la ejecución de la libreria express 
 
-//Escuchamos el server en el puerto 3000 y le indicamos que nos muestre un mensaje por consola , puerto genérico
 
+// voy a configurar los headers, que es lo que quiero que me traiga la base de datos/api
+//1
+app.use((req, res, next) =>{
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');  // POR AHORA SÓLO USO GET QUE pido info, pero es bueno dejarlo todo para futuro
+    res.header('Access-Control-Allow-Methods', true); 
+    res.header('Access-Control-Allow-Methods', 'Content-Type'); 
+}); 
+
+//2 confg cors para def direcciones que tendrán permisos de utilización de la API swim
+const cors = require("cors"); 
+
+//quiero que mi app use
+app.use( cors({
+    origin: ['http://localhost:3000', 'http://localhost:4000'], // Vittorio, aquí son las url que va a permitir ver mi web si quiero otra, se la agrego
+    credentials: true,
+})
+); 
+
+//3 necesito configuarar express para tener datos tipo json 
+
+app.use(express.json()); // convierte en json
+app.use(express.urlencoded({ extend : true})); // me codifica url
+
+// 4 le digo a morgan que me muestre en insomnia o postman las urls que le muestro
+const logger = require("morgan"); // escucha activa de mi api
+app.use(logger("dev"));  //aquí le llamo
+
+
+
+
+
+//Escuchamos el server en el puerto 3000 y le indicamos que nos muestre un mensaje por consola , puerto genérico
 app.listen(3000, () => {
     console.log("Node server listening on port 3000");
 });
