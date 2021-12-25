@@ -1,0 +1,1 @@
+// creo las rutas del http, los paths 

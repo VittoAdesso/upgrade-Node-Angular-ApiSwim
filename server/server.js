@@ -5,6 +5,11 @@ const express = require("express");
 //Importamos la conexion a la db , aquí le llamo a la función creada en el otro arvhivo, por eso esa ruta o path
 const { connect } = require("./api/utils/database/connect");
 
+//5 importo las rutas o paths de la carpeta routes
+const libre = require("./api/routes/libre.routes"); 
+const mariposa = require("./api/routes/mariposa.routes"); 
+const espalda = require("./api/routes/espalda.routes"); 
+
 //Ejecutamos la funcion que conecta con la db
 connect();
 
@@ -38,9 +43,29 @@ app.use(express.urlencoded({ extend : true})); // me codifica url
 const logger = require("morgan"); // escucha activa de mi api
 app.use(logger("dev"));  //aquí le llamo
 
+//6 defino las rutas del paso 5
+// app.use("/libre", libre); 
+// app.use("/mariposa", mariposa); 
+// app.use("/espalda", espalda); 
+
+// 7 defino y llamo un js que tiene todas las rutas posibles existentes
+const HTTPSTATUSCODE = require("./api/utils/httpStatusCode"); 
+app.use((req, res, next) =>{
+
+    let err = new Error(); 
+    err.status = 404; 
+    err.message = HTTPSTATUSCODE[404]; // ME IMPRIME LOS MENSAJES 
+    next(err); 
+}); 
 
 
+//8 creo la función que nos ayuda a recibir y devolver en json el resultado
+app.use((err, req, res, next) =>{
+    return res.status(err.status || 500).json(err.message || "Error inesperado"); 
+}); 
 
+//9 para ocultar con qué se ha realizado la API, protocolo de seguridad
+app.disable("x-powered-by"); 
 
 //Escuchamos el server en el puerto 3000 y le indicamos que nos muestre un mensaje por consola , puerto genérico
 app.listen(3000, () => {
