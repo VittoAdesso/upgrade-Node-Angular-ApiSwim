@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Final project nodeJs, Mongo, Express and Angular",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js", 
-    "dev": "node,on server.js", 
+    "dev": "nodemon server.js", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
