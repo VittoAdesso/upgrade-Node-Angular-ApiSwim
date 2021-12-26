@@ -1,11 +1,12 @@
 // 1 importo modelo
 const Libre = require("../models/Libre"); 
+
 // 2 importo fichero de http de utils
 const HTTPSTATUSCODE = require("../utils/httpStatusCode"); 
 
 // 3 creo los métoddos con sus funciones
-
 const getAllEstilosLibres = async (req, res, next) =>{
+
     try{
         const libre = await Libre.find(); 
         return res.json({
@@ -37,7 +38,6 @@ const getEstiloLibreId = async(req, res, next) => {
 }
 
 //los exporto, las funciones 
-
 module.exports = {
     getAllEstilosLibres, 
     getEstiloLibreId

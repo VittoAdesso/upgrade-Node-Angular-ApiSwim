@@ -18,7 +18,6 @@ const EstilosDeNadoSchema = new Schema({
 {
     timestamps: true, // me ayuda a decirme cada vez que se ha creado
 }
-
 ); 
 
 const EstilosDeNado = mongoose.model("estilos", EstilosDeNadoSchema);  // "" referencia del path despuest del 3000, y depués lo que lleva lo que he pedido

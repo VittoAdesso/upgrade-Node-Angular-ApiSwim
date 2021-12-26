@@ -1,11 +1,13 @@
 // 1 importo modelo
 const Mariposa = require("../models/Mariposa"); 
+
 // 2 importo fichero de http de utils
 const HTTPSTATUSCODE = require("../utils/httpStatusCode"); 
 
 // 3 creo los métoddos con sus funciones
 
 const getAllEstilosMariposa = async (req, res, next) =>{
+
     try{
         const mariposa = await Mariposa.find(); 
         return res.json({
@@ -37,7 +39,6 @@ const getEstiloMariposaId = async(req, res, next) => {
 }
 
 //los exporto, las funciones 
-
 module.exports = {
     getAllEstilosMariposa, 
     getEstiloMariposaId

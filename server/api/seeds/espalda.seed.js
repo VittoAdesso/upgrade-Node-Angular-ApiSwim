@@ -46,4 +46,6 @@ mongoose.connect(process.env.MONGO_DB, { // LA CONECTO (LO IDEAL ES ASÍ!!!! )
     .finally(() => mongoose.disconnect()); // ya cuando me haga todo que me desconecte 
 
 // comprobar que ésto me lo haga bien 
-// ABRO EN TERMINAL CARPETA SEEDS, Y PONGO === node nombreDearchivoSEMILLA.seed.js+ enter 
+// ABRO EN TERMINAL CARPETA SEEDS, Y PONGO === node + nombreDearchivoSEMILLA.seed.js+ enter 
+
+// Recuerda que puedo inyectarla manualmente

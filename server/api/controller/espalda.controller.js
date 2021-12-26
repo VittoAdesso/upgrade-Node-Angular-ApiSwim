@@ -1,11 +1,12 @@
 // 1 importo modelo
 const Espalda = require("../models/Espalda"); 
+
 // 2 importo fichero de http de utils
 const HTTPSTATUSCODE = require("../utils/httpStatusCode"); 
 
 // 3 creo los métoddos con sus funciones
-
 const getAllEstilosEspalda = async (req, res, next) =>{
+
     try{
         const espalda = await Espalda.find(); 
         return res.json({

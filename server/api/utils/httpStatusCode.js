@@ -1,3 +1,4 @@
+//puedo usar ésta plantilla siempre que quiera ahorrame escribir las frases varias veces le cito el cód en []
 
 module.exports = {
   100: "Continue",

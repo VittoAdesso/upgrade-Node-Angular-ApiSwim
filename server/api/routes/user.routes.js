@@ -58,4 +58,5 @@ router.route('/delete-user/:id').delete((req, res, next) => {
     })
 })
 
+//exporto módulo
 module.exports = router;

@@ -50,8 +50,8 @@ app.use("/mariposa", mariposa);
 
 // 7 defino y llamo un js que tiene todas las rutas posibles existentes
 const HTTPSTATUSCODE = require("./api/utils/httpStatusCode"); 
-app.use((req, res, next) =>{
 
+app.use((req, res, next) =>{
     let err = new Error(); 
     err.status = 404; 
     err.message = HTTPSTATUSCODE[404]; // ME IMPRIME LOS MENSAJES 

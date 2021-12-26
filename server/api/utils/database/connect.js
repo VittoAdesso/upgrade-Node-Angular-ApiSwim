@@ -21,9 +21,10 @@ const connect = async () => {
         });
         const { name, host } = db.connection;
         console.log(`Connected with db: ${name}, in host: ${host}`);
-    } catch (error) {
-        console.log("Error to connect with BD", error);
-    }
+    }   
+        catch (error) {
+                console.log("Error to connect with BD", error);
+        }
 };
 //5 exportamos la funcion connect para que sea llamada 
 module.exports = { connect };
