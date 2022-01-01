@@ -10,7 +10,7 @@ const { getAllEstilosLibres, getEstiloLibreId} = require("../controller/libre.co
 
 //definimos métodos y método del controlador con las rutas (revisa carpeta controller)
 router.get("/", getAllEstilosLibres); 
-router.get("/:libreId", getEstiloLibreId)
+router.get("/:libreId", getEstiloLibreId); 
 
 //se debe exportar el router siempre
 module.exports = router; 

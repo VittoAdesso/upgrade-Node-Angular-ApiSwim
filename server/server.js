@@ -30,7 +30,7 @@ const cors = require("cors");
 
 //quiero que mi app use
 app.use( cors({
-    origin: ['http://localhost:3000', 'http://localhost:4200'], // Vittorio, aquí son las url que va a permitir ver mi web si quiero otra, se la agrego
+    origin: ['http://localhost:4000', 'http://localhost:4200'], // Vittorio, aquí son las url que va a permitir ver mi web si quiero otra, se la agrego
     credentials: true,
 })
 ); 
@@ -68,7 +68,7 @@ app.use((err, req, res, next) =>{
 app.disable("x-powered-by"); 
 
 //Escuchamos el server en el puerto 3000 y le indicamos que nos muestre un mensaje por consola , puerto genérico
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log("Node server listening on port 3000");
 });
 
