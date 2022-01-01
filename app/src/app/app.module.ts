@@ -14,8 +14,9 @@ import { FooterComponent } from './core/components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule, 
-    HttpClientModule  // incluyo lel importador para hacer peticiones
+    AppRoutingModule,
+ // incluyo lel importador para hacer peticiones
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LibreRoutingModule } from './libre-routing.module';
 import { LibreComponent } from './components/libre/libre.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { LibreComponent } from './components/libre/libre.component';
   ],
   imports: [
     CommonModule,
-    LibreRoutingModule
+    LibreRoutingModule,
+    HttpClientModule
   ]
 })
 export class LibreModule { }

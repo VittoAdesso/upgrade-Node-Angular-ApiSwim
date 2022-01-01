@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Ilibre } from '../../models/ilibre';
+import { LibreServicesService } from './../../services/libre-services.service';
 
 @Component({
   selector: 'app-libre',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LibreComponent implements OnInit {
 
-  constructor() { }
+  public libreLista: Ilibre[] = [];
+
+  constructor(private libreServicio: LibreServicesService) { }
 
   ngOnInit(): void {
+
+    this.recoverEstilosLibres(); 
   }
+
+
+public recoverEstilosLibres() {
+  return this.libreServicio.getLibre(); 
+
+}
 
 }
