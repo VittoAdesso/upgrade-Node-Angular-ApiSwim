@@ -10,7 +10,7 @@ import { LibreServicesService } from './../../services/libre-services.service';
 })
 export class LibreComponent implements OnInit {
 
-  libreLista: Ilibre[] = [];
+  public libreLista: Ilibre[] = [];
   requestService: any;
 
   protected readonly clearSubscriptions$ = new Subject();
@@ -27,8 +27,8 @@ export class LibreComponent implements OnInit {
     }
 
     public recoverEstilosLibres() {
-   return this.libreServicio.getLibre().pipe(takeUntil(this.clearSubscriptions$),).subscribe((data)=> {
-    this.libreLista = data
+        return this.libreServicio.getLibre().pipe(takeUntil(this.clearSubscriptions$),).subscribe((data)=> {
+          this.libreLista = data.libre; 
   }) 
 
  }
