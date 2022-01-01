@@ -18,7 +18,9 @@ import { FooterComponent } from './core/components/footer/footer.component';
  // incluyo lel importador para hacer peticiones
     HttpClientModule 
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

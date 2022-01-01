@@ -12,5 +12,16 @@ const { getAllEstilosLibres, getEstiloLibreId} = require("../controller/libre.co
 router.get("/", getAllEstilosLibres); 
 router.get("/:libreId", getEstiloLibreId); 
 
+
+// Get All Podcasts
+router.route('/libre').get((req, res, next) => {
+    LibreSchema.find((error, response) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.status(200).json(response)
+        }
+    })
+})
 //se debe exportar el router siempre
 module.exports = router; 
