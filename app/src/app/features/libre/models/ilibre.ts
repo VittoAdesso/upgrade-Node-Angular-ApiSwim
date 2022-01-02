@@ -4,6 +4,5 @@ export interface Ilibre {
     title: String; 
     img: String; 
     description: String; 
-//     video: String; 
-// 
+    // video: String; 
 }

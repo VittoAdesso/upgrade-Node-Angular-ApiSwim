@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { Ilibre } from '../../models/ilibre';
 import { LibreServicesService } from './../../services/libre-services.service';
-
 @Component({
   selector: 'app-libre',
   templateUrl: './libre.component.html',
@@ -12,6 +11,8 @@ export class LibreComponent implements OnInit {
 
   public libreLista: Ilibre[] = [];
   requestService: any;
+  indexCroll: number | null = null;
+  isOpen: boolean = false;
 
   protected readonly clearSubscriptions$ = new Subject();
   
@@ -25,12 +26,16 @@ export class LibreComponent implements OnInit {
     public ngOnDestroy() {
       this.clearSubscriptions$.complete();
     }
-
-    public recoverEstilosLibres() {
-        return this.libreServicio.getLibre().pipe(takeUntil(this.clearSubscriptions$),).subscribe((data)=> {
-          this.libreLista = data.libre; 
-  }) 
-
+   
+     public recoverEstilosLibres() {
+         return this.libreServicio.getLibre().pipe(takeUntil(this.clearSubscriptions$),).subscribe((data: any)=> {
+           this.libreLista = data; 
+          //  this.libreLista = data 
+   }) 
+}
+  openCroll(index: number) {
+    this.indexCroll !== null ? this.indexCroll =  null : this.indexCroll = index;  
+  
  }
 }
 
