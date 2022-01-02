@@ -29,7 +29,7 @@ export class LibreComponent implements OnInit {
    
      public recoverEstilosLibres() {
          return this.libreServicio.getLibre().pipe(takeUntil(this.clearSubscriptions$),).subscribe((data: any)=> {
-           this.libreLista = data; 
+           this.libreLista = data.libre; 
           //  this.libreLista = data 
    }) 
 }
