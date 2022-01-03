@@ -6,6 +6,21 @@ import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
+
+export class LibreServicesService {
+
+  private baseUrl: string = "http://localhost:5000/libre";  
+
+  constructor(private http: HttpClient) { }
+
+public getEstilosLibre(){
+
+  return this.http.get(this.baseUrl); 
+}
+
+}
+
+/* 
 export class LibreServicesService {
   endpoint: string = 'http://localhost:5000';
   headers = new HttpHeaders().set('Content-Type', 'application/json');
@@ -34,3 +49,4 @@ export class LibreServicesService {
     return throwError(msg);
   }
 }
+ */

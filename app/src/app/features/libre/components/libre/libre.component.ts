@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Subject, takeUntil } from 'rxjs';
 import { Ilibre } from '../../models/ilibre';
 import { LibreServicesService } from './../../services/libre-services.service';
 @Component({
@@ -7,6 +6,45 @@ import { LibreServicesService } from './../../services/libre-services.service';
   templateUrl: './libre.component.html',
   styleUrls: ['./libre.component.scss']
 })
+
+export class LibreComponent implements OnInit {
+      public EstiloLibre: Ilibre[] = []; // es una variable que 
+      constructor(private libreServicesService: LibreServicesService ) { } 
+
+      ngOnInit(): void {
+        
+        this.recoverList(); 
+       
+      }
+
+      public recoverList(){
+      this.libreServicesService.getEstilosLibre().subscribe((data: any) =>{ 
+
+          const results: Ilibre[] = data.libre; 
+  
+          const trasnformLista = results.map(({title, img, description }) => ({
+            title, 
+            img, 
+            description
+
+          })); 
+               this.EstiloLibre = trasnformLista; 
+          })
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 export class LibreComponent implements OnInit {
 
   public libreLista: Ilibre[] = [];
@@ -37,5 +75,5 @@ export class LibreComponent implements OnInit {
     this.indexCroll !== null ? this.indexCroll =  null : this.indexCroll = index;  
   
  }
-}
+} */
 
