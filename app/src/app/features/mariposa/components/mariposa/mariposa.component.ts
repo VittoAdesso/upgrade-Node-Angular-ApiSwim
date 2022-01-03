@@ -11,7 +11,7 @@ export class MariposaComponent implements OnInit {
 
   
   public EstiloMariposa: Imariposa[] = []; // es una variable que 
-  constructor(private mariposaService: MariposaService ) { } 
+  constructor( private mariposaService: MariposaService ) { } 
 
 
   ngOnInit(): void {
@@ -19,21 +19,23 @@ export class MariposaComponent implements OnInit {
     this.recoverList(); 
   }
 
-
   public recoverList(){
     
     this.mariposaService.getEstilosMariposa().subscribe((data: any) =>{ 
   
-        const results: Imariposa[] = data.mariposa; 
-  
-        const trasnformLista = results.map(({title, img, description }) => ({
-          title, 
-          img, 
-          description
-  
-        })); 
-             this.EstiloMariposa = trasnformLista; 
-        })
+      this.EstiloMariposa = data.data.mariposa; 
+    })
   }
 }
 
+// ést va dentro normalmente, pero lo he sacado para probar.... 
+// const results: Imariposa[] = data.mariposa; 
+
+/*  const trasnformLista = results.map(({title, img, description }) => ({
+ title, 
+ img, 
+ description
+
+}));  */
+    //  this.EstiloMariposa = trasnformLista; 
+  

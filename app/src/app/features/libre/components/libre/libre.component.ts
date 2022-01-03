@@ -20,16 +20,9 @@ export class LibreComponent implements OnInit {
       public recoverList(){
       this.libreServicesService.getEstilosLibre().subscribe((data: any) =>{ 
 
-          const results: Ilibre[] = data.libre; 
-  
-          const trasnformLista = results.map(({title, img, description }) => ({
-            title, 
-            img, 
-            description
+        this.EstiloLibre = data.data.libre; 
 
-          })); 
-               this.EstiloLibre = trasnformLista; 
-          })
+      })
     }
 }
 
