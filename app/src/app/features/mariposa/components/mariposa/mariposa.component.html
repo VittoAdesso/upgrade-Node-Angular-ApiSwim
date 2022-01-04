@@ -1,13 +1,20 @@
-<p>mariposa works!</p>
+
 
 
 <div *ngFor="let brazo of EstiloMariposa">
 
-<p> {{ brazo.title}} </p>
+<h2> {{ brazo.title}} </h2>
+
+<div class="card">
+
+    <img src="{{brazo.img}}" alt="{{brazo.img}}" />
+
+</div>
+
 <p> {{ brazo.description}} </p>
+
 </div>
 
 
 
 
-<p>QUE=====</p>
