@@ -14,6 +14,14 @@ const libre = [{
     "description": "Se utiliza mucho para comenzar."
     // "video": ""
 
+}, 
+{
+
+    "title": "Libre",
+    "img": "https://nadaconexceso.com/wp-content/uploads/2020/06/Estilo-libre-Crol-2-1.jpg",
+    "description": "Se utiliza mucho para comenzar."
+    // "video": ""
+
 }]; 
 
 // ahora creo función que me conecte la base de datos, verifica si ya exite lo reemplaza, y sino lo mete nuevo
