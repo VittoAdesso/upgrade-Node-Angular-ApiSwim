@@ -1,11 +1,26 @@
 
-<div *ngFor="let croll of EstiloLibre">
+<div class="title">
+     
+    <h1>Estilo Crol </h1>  
+    
+   </div>
+    
+<div>
 
-
-<p>{{ croll.title }} </p>
-
+   <div class="target" *ngFor="let croll of EstiloLibre">
+       
+       <h2> {{ croll.title }} </h2>
+       
+       <div class="card">
+           
+           <img src="{{ croll.img }}" alt="{{ croll.img }}" />
+           
+       </div>
+       
+       <p> {{ croll.description}} </p>
+       
 </div>
-
-<p>FUNCIONA ! </p>
+   
+</div>
 
 

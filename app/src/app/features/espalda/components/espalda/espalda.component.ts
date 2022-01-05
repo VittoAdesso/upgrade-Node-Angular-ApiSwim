@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IEspalda } from '../../models/iespalda';
+import { EspaldaService } from '../../services/espalda.service';
 
 @Component({
   selector: 'app-espalda',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EspaldaComponent implements OnInit {
 
-  constructor() { }
+  public EstiloEspalda: IEspalda[] = []; // es una variable que 
+      constructor(private espaldaService: EspaldaService ) { } 
 
-  ngOnInit(): void {
-  }
+      ngOnInit(): void {
+        
+        this.recoverList(); 
+       
+      }
+
+      public recoverList(){
+      this.espaldaService.getEstilosEspalda().subscribe((data: any) =>{ 
+
+        this.EstiloEspalda = data.data.espalda; 
+
+      })
+    }
 
 }

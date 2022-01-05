@@ -1,16 +1,25 @@
 
+ <div class="title">
+     
+     <h1>Estilo Mariposa </h1>  
+     
+    </div>
+     
+<div>
 
-
-<div *ngFor="let brazo of EstiloMariposa">
-
-<h2> {{ brazo.title}} </h2>
-
-<div class="card">
-
-    <img src="{{ brazo.img }}" alt="{{ brazo.img }}" />
-
+    <div class="target" *ngFor="let brazo of EstiloMariposa">
+        
+        <h2> {{ brazo.title}} </h2>
+        
+        <div class="card">
+            
+            <img src="{{ brazo.img }}" alt="{{ brazo.img }}" />
+            
+        </div>
+        
+        <p> {{ brazo.description}} </p>
+        
+    </div>
+    
 </div>
-
-<p> {{ brazo.description}} </p>
-
-</div>
+    
