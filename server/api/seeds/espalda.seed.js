@@ -32,13 +32,13 @@ const espalda = [{
 }, 
 {
     "title": "Tips",
-    "img": "https://content.artofmanliness.com/uploads/2016/06/Front-Crawl-Stroke-3.jpg",
+    "img": "https://i.ytimg.com/vi/KI_suSO8sEA/maxresdefault.jpg",
     "description": "Es el único estilo en el que la cara nunca queda sumergida en el agua, excepto en los virajes y las salidas. Por este motivo, algunas publicaciones y/o autores sobre natación afirman que el ritmo respiratorio no es tan importante como en otros estilos. Sin embargo, el coordinar la respiración con los movimientos de brazos es fundamental, como en otros estilos, para que la fatiga surja lo más tarde posible."
     // "video": ""
 }, 
 {
     "title": "Músculos que trabajamos",
-    "img": "https://i.ytimg.com/vi/OTBtx8dkstw/hqdefault.jpg",
+    "img": "https://cdn.mos.cms.futurecdn.net/nhrgrnDTfrfsAPDiZWsDk6.jpg",
     "description": "Pectoral, Tríceps, hombros, trapecio, , dorsales, abdomen."
     // "video": ""
 
