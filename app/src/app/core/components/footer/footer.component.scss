@@ -1,0 +1,16 @@
+div{
+    display: flexbox;
+    justify-content: flex-start;
+    // align-items: center;
+    // justify-content: last baseline;
+
+    h2{
+        // align-items: center;
+        margin-top: 200px;
+        text-align: center;
+    }
+
+    img{
+        align-content: center;
+    }
+}
