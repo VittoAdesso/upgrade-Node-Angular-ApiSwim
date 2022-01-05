@@ -8,7 +8,7 @@ const Mariposa = require("../models/Mariposa");
 
 // es mi array que debo ir construyendo
 const mariposa = [
-    
+
     {
     "title": "Mariposa",
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGNhvxr7TajRtLXLclOxx9AmJtxfFd91h1Hg&usqp=CAU",
@@ -22,19 +22,19 @@ const mariposa = [
     // "video": ""
 }, 
 {
-    "title": "Ténica",
+    "title": "Movimientos a ejecutar",
     "img": "https://www.swim-teach.com/images/butterfly-body-movement.jpg",
     "description": "Por cada acción de brazos o brazada se realizan dos patadas: La primera patada hacia abajo se realiza cuando las manos salen del agua (facilita la salida de la cabeza y la recuperación de brazos) y la segunda patada hacia abajo se produce cuando las manos entran en el agua (para no perder velocidad). En este punto existen diferencias de opinión por parte de algunos autores, ya que unos afirman que la intensidad o esfuerzo de las dos patadas es exactamente igual, y que son las diferencias posturales del cuerpo la causa de que el primer golpe parezca más potente que el segundo. Por otro lado, están los que piensan que la primera patada es más fuerte que la segunda."
     // "video": ""
 }, 
 {
-    "title": "Ténica delfín",
+    "title": "Ténica del delfín",
     "img": "https://photos.cdn-outlet.com/photos/cms/guide/image/swimming/swimming_butterfly_01_300x350.jpg",
     "description": "Característica más llamativas de la mariposa es un movimiento ondulatoria del cuerpo, en forma de 'S' tumbada, de algún modo parecido al nado de los delfines, el cual resulta de la perfecta coordinación entre brazos, piernas y las diferentes posiciones del cuerpo. Tampoco este punto está exento de discusión ya que algunos autores dudan o afirman que dicha ondulación no existe y que es producto de un efecto visual. Y en parte tienen razón porque dicha ondulación sólo se describe como una trayectoria."
     // "video": ""
 }, 
 {
-    "title": "Músculos",
+    "title": "Músculos que trabajamos",
     "img": "https://pbs.twimg.com/media/C68zU22WoAAVAJh.jpg",
     "description": "Dorsal ancho, deltoides, romboides, trapecio, ilicostal, recto abdominal, oblicuos, músculos paravertebrales"
     // "video": ""
@@ -44,7 +44,8 @@ const mariposa = [
 
 // ahora creo función que me conecte la base de datos, verifica si ya exite lo reemplaza, y sino lo mete nuevo
 
- mongoose.connect(process.env.MONGO_DB, { // LA CONECTO (LO IDEAL ES ASÍ!!!! )
+mongoose.connect(process.env.MONGO_DB, { // LA CONECTO (LO IDEAL ES ASÍ!!!! )
+ 
 //sino la forzo con su clave con el url completo de mongo
 //en caso de que no me guarde los datos 
     useNewUrlParser: true,
