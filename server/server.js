@@ -51,6 +51,7 @@ app.use(logger("dev"));  //aquí le llamo
 app.use("/libre", libre); 
 app.use("/espalda", espalda); 
 app.use("/mariposa", mariposa); 
+// app.use("/nav", navegacionPrueba); //probando
 
 // 7 defino y llamo un js que tiene todas las rutas posibles existentes
 const HTTPSTATUSCODE = require("./api/utils/httpStatusCode"); 
