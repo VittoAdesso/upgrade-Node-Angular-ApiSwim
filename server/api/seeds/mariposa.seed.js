@@ -23,7 +23,7 @@ const mariposa = [
 }, 
 {
     "title": "Movimientos a ejecutar",
-    "img": "https://www.swim-teach.com/images/butterfly-body-movement.jpg",
+    "img": "https://th.bing.com/th/id/R.cf0e4761e1a372d9e55c59bdd8f8b16d?rik=rBXmZuYkmVvOtA&riu=http%3a%2f%2f1.bp.blogspot.com%2f-wMLegx6shR8%2fUvvOv2pa8KI%2fAAAAAAAAAJs%2fWHntOTz3xv0%2fs1600%2ftecnica%2bmariposa%2bnatacion.gif&ehk=lkr0RofEu0OvX95v0Dm25kx9EtkEppxw172oFoNv6eg%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1",
     "description": "Por cada acción de brazos o brazada se realizan dos patadas: La primera patada hacia abajo se realiza cuando las manos salen del agua (facilita la salida de la cabeza y la recuperación de brazos) y la segunda patada hacia abajo se produce cuando las manos entran en el agua (para no perder velocidad). En este punto existen diferencias de opinión por parte de algunos autores, ya que unos afirman que la intensidad o esfuerzo de las dos patadas es exactamente igual, y que son las diferencias posturales del cuerpo la causa de que el primer golpe parezca más potente que el segundo. Por otro lado, están los que piensan que la primera patada es más fuerte que la segunda."
     // "video": ""
 }, 
@@ -44,7 +44,7 @@ const mariposa = [
 
 // ahora creo función que me conecte la base de datos, verifica si ya exite lo reemplaza, y sino lo mete nuevo
 
-mongoose.connect(process.env.MONGO_DB, { // LA CONECTO (LO IDEAL ES ASÍ!!!! )
+mongoose.connect(process.env.MONGO_DB,  { // LA CONECTO (LO IDEAL ES ASÍ!!!! )
  
 //sino la forzo con su clave con el url completo de mongo
 //en caso de que no me guarde los datos 

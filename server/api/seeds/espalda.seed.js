@@ -17,7 +17,7 @@ const espalda = [{
 }, 
 {
     "title": "Básicos",
-    "img": "https://www.swim-teach.com/images/backstroke-timing.jpg",
+    "img": "https://www.swim-teach.com/images/backstroke-leg-kick.jpg",
     "description": "Como en el crol de frente, el estilo espalda consiste en una acción alternativa de los brazos y de las piernas. Sin embargo, a diferencia del crol, los nadadores están sobre sus espaldas, en posición dorsal. Esto les obliga a realizar las brazadas con una trayectoria más lateral que por debajo del agua, como sucede en el crol."
     // "video": ""
 
@@ -38,7 +38,7 @@ const espalda = [{
 }, 
 {
     "title": "Músculos que trabajamos",
-    "img": "https://cdn.mos.cms.futurecdn.net/nhrgrnDTfrfsAPDiZWsDk6.jpg",
+    "img": "https://i.ytimg.com/vi/cE99Tojutmw/maxresdefault.jpg",
     "description": "Pectoral, Tríceps, hombros, trapecio, , dorsales, abdomen."
     // "video": ""
 

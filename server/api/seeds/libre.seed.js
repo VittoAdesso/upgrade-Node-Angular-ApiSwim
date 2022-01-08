@@ -17,7 +17,7 @@ const libre = [{
 }, 
 {
     "title": "Básicos",
-    "img": "https://i.pinimg.com/originals/a3/bf/df/a3bfdfbfac3d78bbfcec4df2abc148b1.jpg",
+    "img": "https://www.swim-teach.com/images/front-crawl-summary.jpg",
     "description": "En el crol, los nadadores utilizan una acción de brazos y un batido de pies alternativo. Un ciclo completo de este estilo se compone de una acción completa del brazo derecho, una completa del izquierdo y de un número variable de batidos de piernas."
     // "video": ""
 
@@ -47,7 +47,7 @@ const libre = [{
 
 // ahora creo función que me conecte la base de datos, verifica si ya exite lo reemplaza, y sino lo mete nuevo
 
-mongoose.connect(process.env.MONGO_DB,
+mongoose.connect(process.env.MONGO_DB ,
     // LA CONECTO (LO IDEAL ES ASÍ!!!! )
 //sino la forzo con su clave con el url completo de mongo
 //en caso de que no me guarde los datos 
