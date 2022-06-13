@@ -4,16 +4,16 @@ Remember if you clone it:
 
 `npm i`
 
-## Application preview
+## Application preview style
 
-<img src="../src/assets/1.png" with=100>
+<img src="app/src/assets/1.png" with=100>
 
 --- 
 
-# start server: 
+# Start server: 
 `npm run dev || npm start`
 
-# deployed web: 
+# Deployed web: 
 `ng serve -o`
 
 --- 
